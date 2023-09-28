@@ -1,3 +1,3 @@
 final: prev: {
-  firefoxpwa = prev.callPackage import ./../pkgs/firefoxpwa.nix { };
+  firefoxpwa = prev.callPackage ./../pkgs/firefoxpwa.nix { };
 }
