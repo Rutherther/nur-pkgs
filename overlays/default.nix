@@ -1,5 +1,4 @@
 {
-  # Add your overlays here
-  #
-  # my-overlay = import ./my-overlay;
+  firefoxpwa = import ./firefoxpwa.nix;
+  firefox-native-messaging = import ./firefox-native-messaging.nix;
 }
