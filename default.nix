@@ -7,12 +7,17 @@
 #     nix-build -A mypackage
 
 { pkgs ? import <nixpkgs> {} }: let
-  rutherther-sequence-detector = builtins.fetchTarball {
-    url = "https://github.com/Rutherther/sequence-detector/archive/c447c0d83877907c3ade8a2e9b4f659d4ef92904.tar.gz";
+  rutherther-sequence-detector = pkgs.fetchFromGitHub {
+    owner = "Rutherther";
+    repo = "sequence-detector";
+    rev = "c447c0d83877907c3ade8a2e9b4f659d4ef92904";
     sha256 = "06719x0fv8arpld0n1kwc0v507gpbqjp3sx3kin72441fq9qi3q6";
   };
-  rutherther-mpris-ctl = builtins.fetchTarball {
-    url = "https://github.com/Rutherther/mpris-ctl/archive/c5731a17d99553d79810791e5a5aff61344669d5.tar.gz";
+
+  rutherther-mpris-ctl = pkgs.fetchFromGitHub {
+    owner = "Rutherther";
+    repo = "mpris-ctl";
+    rev = "c5731a17d99553d79810791e5a5aff61344669d5";
     sha256 = "0jkfdyx3xcvv5nlzgb9qd15j4km9jfaj4x8rlf2il6vclmknj4xz";
   };
 in {
